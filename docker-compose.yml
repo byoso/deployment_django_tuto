@@ -21,6 +21,7 @@ services:
       - 8000:8000
     volumes:
       - ./:/app
+      - ./data/web:/vol/web
     depends_on:
       - db
 

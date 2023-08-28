@@ -1,6 +1,11 @@
 .venv/
 .env
 
+staticfiles/
+mediafiles/
+
 *.sqlite3
 __pycache__/
 *.pyc
+
+/data

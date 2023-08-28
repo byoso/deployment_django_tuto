@@ -6,7 +6,6 @@
 
 <h2>Samples:</h2>
 {% for sample in samples %}
-
-    <a href="{{ sample.file.url }}">{{ sample.file.name }}</a>
-
+<a href="{{ sample.attachment.url }}">{{ sample.attachment.name }}</a>
+<br>
 {% endfor %}
