@@ -3,3 +3,10 @@
 <h1>Home</h1>
 
 <img src="{% static 'bird.png' %}" alt="[bird image]">
+
+<h2>Samples:</h2>
+{% for sample in samples %}
+
+    <a href="{{ sample.file.url }}">{{ sample.file.name }}</a>
+
+{% endfor %}
