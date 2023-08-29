@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     # local
     'app_test',
+    '_deployment',
 ]
 
 MIDDLEWARE = [
