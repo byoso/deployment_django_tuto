@@ -1,17 +1,13 @@
 server {
     listen ${LISTEN_PORT};
 
-    location /static {
-        alias /vol/static/static;
-    }
+    server_name ${DOMAIN} www.${DOMAIN};
 
-    location /media {
-        alias /vol/static/media;
+    location /.well-known/acme-challenge/ {
+        root /vol/www/;
     }
 
     location / {
-        uwsgi_pass                  ${APP_HOST}:${APP_PORT};
-        include                     /etc/nginx/uwsgi_params;
-        client_max_body_size        ${MAX_UPLOAD_SIZE}M;
+        return 301 https://$host$request_uri;
     }
 }
