@@ -1,5 +1,4 @@
 FROM nginxinc/nginx-unprivileged:1.23.2-alpine
-LABEL maintainer="ppws.fr"
 
 COPY ./nginx/* /etc/nginx/
 COPY ./run.sh /run.sh
