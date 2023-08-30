@@ -1,4 +1,4 @@
-FROM nginxinc/nginx-unprivileged:1-alpine3.18
+FROM nginx:1.25.2-alpine3.18
 LABEL maintainer="ppws.fr"
 
 COPY ./nginx/* /etc/nginx/

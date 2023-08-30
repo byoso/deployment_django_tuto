@@ -4,10 +4,10 @@
 
 set -e
 
-# until nc -z proxy 80; do
-#     echo "Waiting for nginx to be available..."
-#     sleep 2s
-# done
+until nc -z proxy 80; do
+    echo "Waiting for nginx to be available..."
+    sleep 2s
+done
 
 echo "Trying to get a certificate..."
 
@@ -20,5 +20,6 @@ certbot certonly \
     --rsa-key-size 4096 \
     --agree-tos \
     --non-interactive
+
 
 echo "Certificate obtained."
