@@ -47,8 +47,8 @@ services:
     env_file:
       - .env
     volumes:
-      - certbot-web: /vol/www
-      - certbot-certs: /etc/letsencrypt
+      - certbot-web:/vol/www
+      - certbot-certs:/etc/letsencrypt
     depends_on:
       - proxy
 
