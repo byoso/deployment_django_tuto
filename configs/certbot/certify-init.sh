@@ -10,6 +10,8 @@ until nc -z proxy 80; do
 done
 
 echo "Trying to get a certificate..."
+echo "- Domain: $DOMAIN"
+echo "- Domain owner email: $ACME_DEFAULT_EMAIL"
 
 certbot certonly \
     --webroot \

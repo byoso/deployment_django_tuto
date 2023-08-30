@@ -16,6 +16,6 @@ RUN apk add --no-cache openssl bash && \
 VOLUME /vol/static
 VOLUME /vol/www
 
-# USER nginx
+# USER nginx  # <- script fails if not root
 
 CMD ["/run.sh"]
