@@ -1,5 +1,5 @@
 server {
-    listen ${LISTEN_PORT};
+    listen 80;
 
     server_name ${DOMAIN} www.${DOMAIN};
 
