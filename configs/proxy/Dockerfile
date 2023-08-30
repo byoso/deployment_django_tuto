@@ -1,4 +1,4 @@
-FROM nginxinc/nginx-unprivileged:1-alpine3.18
+FROM nginxinc/nginx-unprivileged:1.23.2-alpine
 LABEL maintainer="ppws.fr"
 
 COPY ./nginx/default.conf.tpl /etc/nginx/default.conf.tpl
