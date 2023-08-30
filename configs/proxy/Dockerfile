@@ -1,4 +1,4 @@
-FROM nginx:1.25.2-alpine3.18
+FROM nginxinc/nginx-unprivileged:1.23.2-alpine
 LABEL maintainer="ppws.fr"
 
 COPY ./nginx/* /etc/nginx/
@@ -16,6 +16,6 @@ RUN apk add --no-cache openssl bash && \
 VOLUME /vol/static
 VOLUME /vol/www
 
-USER nginx
+# USER nginx
 
 CMD ["/run.sh"]
