@@ -33,6 +33,10 @@ ALLOWED_HOSTS.extend(
     )
 )
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://www.ppws.fr',
+    'https://ppws.fr',
+    ]
 
 # Application definition
 

@@ -1,5 +1,3 @@
-
-
 import time
 
 from psycopg2 import OperationalError as Psycopg2OperationalError
